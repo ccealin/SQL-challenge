@@ -1,0 +1,24 @@
+###Part 1
+Alter: Allows one to edit the table structure, such as changing the number of columns/rows, data types of a column, renaming columns, renaming tables, and so forth. It is a Data Definition Language (DDL). Unlike an UPDATE statement, the ALTER statement does not change the data itself.
+Update: Allows one to edit existing data in a table, not the structure, in three steps: UPDATE, SET, WHERE. It is a Data Manipulation Language (DML).
+
+
+### Part 2
+CREATE TABLE vendor
+(id SERIAL PRIMARY KEY,
+vendor VARCHAR(20),
+last_name VARCHAR(20),
+department_id INT);
+
+INSERT INTO employee
+	(first_name,last_name,department_id)
+	VALUES('Chris', 'Christian',25),
+		('Jan','Jansson',45),
+		('Sam', 'Samuels',45);
+
+SELECT * FROM employee
+
+ALTER TABLE employee
+RENAME COLUMN department_id TO dept_id
+
+SELECT * FROM employee

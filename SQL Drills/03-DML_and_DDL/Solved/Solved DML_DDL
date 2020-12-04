@@ -1,0 +1,24 @@
+### Part 1
+DDL: Data Definition Language; including Alter, Create, Drop, Rename statements. This language defines the database schema and can modify the database structure. 
+DML: Data Manipulation Language; including Insert, Update, and Delete statement; this language modifies the data itself.
+
+### Part 2
+CREATE TABLE vendor
+(id SERIAL PRIMARY KEY,
+vendor_name VARCHAR(20),
+vendor_country VARCHAR(20));
+
+INSERT INTO vendor
+	(vendor_name,vendor_country)
+	VALUES('Carlton', 'Turkey'),
+		('Cascade Yarns','United States'),
+		('Debbie Bliss', 'England'),
+		('Tahki','Greece');
+		
+SELECT * FROM vendor
+
+UPDATE vendor
+SET vendor_country = 'Croatia'
+WHERE id=4
+
+SELECT * FROM vendor
